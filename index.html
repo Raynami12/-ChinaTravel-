@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="从数据观察 China Travel 的走红：免签政策、入境人流、搜索热度与视频叙事如何共同改变外国游客对中国旅行的想象。"
+    />
+    <title>从免签到 China Travel：外国人真的更爱来中国了吗？</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts-wordcloud@2.1.0/dist/echarts-wordcloud.min.js"></script>
+  </head>
+  <body>
+    <div class="reading-progress" aria-hidden="true"><span></span></div>
+    <header class="site-nav">
+      <a href="#top" class="brand">从免签到“China Travel”</a>
+      <nav aria-label="页面章节">
+        <a href="#policy">免签</a>
+        <a href="#arrival">入境</a>
+        <a href="#search">搜索</a>
+        <a href="#gateways">城市</a>
+        <a href="#video">视频</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="overline">Data journalism · visa-free travel · social media</p>
+          <h1 class="flip-title" aria-label="从免签到 China Travel：外国人真的更爱来中国了吗？">
+            <span>从</span><span>免</span><span>签</span><span>到</span><span>“</span><span>China</span><span>Travel</span><span>”</span><span>：</span>
+            <br />
+            <span>外</span><span>国</span><span>人</span><span>真</span><span>的</span><span>更</span><span>爱</span><span>来</span><span>中</span><span>国</span><span>了</span><span>吗</span><span>？</span>
+          </h1>
+          <p class="lead">
+            2025年8月，美国的 James 像往常一样刷着社交媒体。首页上弹出的是黄浦江璀璨的夜景、长城的落日，以及重庆穿楼而过的轻轨。一段短视频让他停下了滑动的手指。在了解到144小时免签政策后，他做了一个决定——订下一张飞往上海的机票，亲眼去看看这个国家。
+          </p>
+          <p class="lead secondary">
+            随着免签政策的不断扩围，"China Travel"成为了互联网上的热门词汇，来华旅客数量也随之攀升。有舆论认为这代表着外国人对中国的好感正在增加。但在这个结论面前，我们想多追问一句：社交网络上的点赞和惊叹，究竟有多少转化成了真实的脚步？这股热潮的背后到底意味着什么？
+          </p>
+          <div class="hero-actions">
+            <a class="hero-link" href="#policy">开始验证</a>
+            <div class="hero-search" aria-label="关键词搜索装饰">
+              <span class="search-icon"></span>
+              <strong>China Travel</strong>
+              <em>2023-2026</em>
+            </div>
+          </div>
+        </div>
+        <aside class="hero-stats reveal">
+          <div>
+            <span class="stat-label">2025年外国人出入境</span>
+            <strong data-count="8203.5">0</strong>
+            <span>万人次</span>
+          </div>
+          <div>
+            <span class="stat-label">2025年免签入境占比</span>
+            <strong data-count="73.1">0</strong>
+            <span>%</span>
+          </div>
+        </aside>
+      </section>
+
+      <section class="chapter intro reveal">
+        <p class="stamp">ENTRY 00</p>
+        <h2>来华旅游为何升温？</h2>
+        <p>
+          过境签证政策的不断完善，推动了来华的外国游客数量持续增长，人们常常会借此以为外国人更喜欢来中国了。但一次旅行能不能成行，并不只取决于“喜欢”与否。签证是否方便、短视频是否激起兴趣，以及落地后的支付、交通和语言服务，都会影响人们的旅游选择。
+        </p>
+        <p>
+          所以接下来，不妨沿着三条线索往下看：入境政策是否真正降低了门槛，来华客流是否回升，海外平台上的“中国”又是如何被看见、转发和重新讲述的。热度当然可以制造“中国热”的氛围，但也需要数据以严谨的方式论证外国人是否更爱来中国。
+        </p>
+      </section>
+
+      <section class="cinema-break reveal" aria-label="机场与 China Travel 搜索氛围图">
+        <img src="assets/arrival-window-china-travel.png" alt="飞机舷窗、机场入境和手机 China Travel 搜索构成的电影感图像" />
+        <div>
+          <p class="stamp">CORE</p>
+          <h2>热度带来了游客？</h2>
+          <p>
+            海外平台上的“中国”正在成为一个热门话题，但平台的热度并不等于他们真的打算来中国旅游。在参考平台数据的同时，我们更关心这股热度最终又转化成了多少入境客流。
+          </p>
+        </div>
+      </section>
+
+      <section class="chapter scrolly" id="policy">
+        <div class="story-text reveal">
+          <p class="stamp">POLICY 01</p>
+          <h2>政策：<br/>入境门槛降低的基础</h2>
+          <p>
+            一次跨境旅行，往往从“能否方便入境”开始。自2023年底起，中国陆续扩大单方面免签范围，延长部分国家免签停留期限，并将过境免签时间延长至240小时。
+
+这些调整减少了签证办理的时间成本和不确定性，也让短途旅游、商务访问和中转停留更容易成行。免签政策并不是“China Travel”升温的唯一原因，却为海外游客从产生兴趣到真正出发，提供了更直接的现实条件。
+          </p>
+        </div>
+        <div class="visual-stack">
+          <div class="timeline reveal">
+            <div class="figure-kicker">时间表</div>
+            <div id="policyTimeline"></div>
+          </div>
+          <figcaption style="margin-top: 8px; color: rgba(7, 28, 33, 0.55); font-size: 13px; font-family: 'Bahnschrift', 'Microsoft YaHei', sans-serif; line-height: 1.6;">
+            <strong style="display: block; color: #a74737; margin-bottom: 4px; font-size: 14px;">表1 免签政策时间线</strong>
+            <b>资料来源:</b> 国家移民管理局、外交部公开政策信息。<br/>
+              <b>注:</b> 该时间线梳理2023年底以来中国单方面免签、过境免签、停留期限延长等主要政策节点。<br/>
+          </figcaption>
+          <figure class="chart-card reveal" style="margin-top: 32px;">
+            <div class="figure-kicker">免签政策覆盖与海外搜索热度</div>
+            <div class="world-policy-map" id="policyWorldMap"></div>
+            <figcaption>
+              <strong style="display: block; color: #a74737; margin-bottom: 4px; font-size: 14px;">图1 免签与过境免签政策覆盖地图</strong>
+              <b>资料来源：</b> 国家移民管理局及政策整理表。<br/>
+              <b>注:</b> 根据公开政策文本整理国家和地区名单，并按政策类型归入欧洲、东亚、东南亚、北美和大洋洲等区域。
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="chapter scrolly" id="arrival">
+        <div class="story-text reveal">
+          <p class="stamp">ARRIVAL 02</p>
+          <h2>从屏幕到口岸</h2>
+          <p>
+            “China Travel”在海外社交媒体上频繁出现，也有较多的讨论话题。而口岸数据为我们提供了一个观察视角，让我们以客观真实的数据来审视“热度”是否转化为了“出行”。
+          </p>
+          <p>
+            2025年，外国人出入境达到8203.5万人次；同期，免签入境外国人3008万人次，占外国人入境总量的73.1%。至少从客流规模来看，对中国旅行的关注已经不只停留在屏幕上。
+          </p>
+        </div>
+        <div class="metric-rail reveal">
+          <article><span>外国人出入境</span><strong data-count="8203.5">0</strong><em>万人次 · 2025</em></article>
+          <article><span>免签入境外国人</span><strong data-count="3008">0</strong><em>万人次 · 2025</em></article>
+          <article><span>免签入境占比</span><strong data-count="73.1">0</strong><em>% · 2025</em></article>
+        </div>
+        <div class="split-visual">
+          <figure class="chart-card reveal">
+            <div class="figure-kicker">客流变化</div>
+            <div id="borderChart" class="chart"></div>
+            <figcaption>
+              <strong style="display: block; color: #a74737; margin-bottom: 4px; font-size: 14px;">图2 外国人出入境与免签入境人次变化</strong>
+              <b>资料来源:</b> 国家移民管理局公开发布数据。<br/>
+              <b>注:</b> 21-23年无免签入境外国人人次数据。单位为万人次；出入境人次不等于独立人数，同一旅客多次出入境可能被重复计入。2026年Q1数据以散点标注，避免与全年数据直接比较。<br/>
+              <b>计算方法:</b> 以年度为单位，统计外国人出入境总人次与免签入境人次，并以折线图展示两者的变化趋势。<br/>
+              <b>主要发现:</b> 按年化预测口径观察，2026年外国人出入境与免签入境仍可能延续增长趋势，免签政策带来的入境便利效应仍在释放。
+            </figcaption>
+          </figure>
+          <figure class="chart-card reveal">
+            <div class="figure-kicker">外国人入境方式占比</div>
+            <div id="visaShareChart" class="chart"></div>
+            <figcaption>
+              <strong style="display: block; color: #a74737; margin-bottom: 4px; font-size: 14px;">图3 2025年免签入境占外国人入境比例</strong>
+              <b>资料来源:</b> 国家移民管理局公开发布数据。<br/>
+              <b>注:</b> 73.1%为2025年免签入境外国人在入境外国人中的占比，不代表全部入境游客结构。<br/>
+              <b>计算方法:</b> 使用“免签入境外国人次 / 入境外国人次”计算占比，并以环形图展示免签入境与其他入境方式的比例关系。<br/>
+              <b>主要发现:</b> 2025年免签入境人次占据了总外籍入境人次的绝对主导（73.1%），政策红利直接转化为客流增量。
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+<section class="chapter scrolly" id="search">
+  <div class="story-text reveal search-copy">
+    <p class="stamp">SEARCH 03</p>
+    <h2>搜索热度里的“中国”</h2>
+
+    <p>
+      诚然，入境数据可以告诉我们外国人来华的数量；但搜索数据反映的是更多人对中国旅行的关注。
+    </p>
+
+    <p>
+      我们选择以全球最大搜索引擎Google作为观察工具，通过Google Trends记录China Travel相关的关键词在不同时间和地区的相对热度。以此观察“China Travel”什么时候开始受到更多关注，以及这股关注来自哪些地方。
+    </p>
+
+    <p>
+      从趋势来看，2025年以来，“China Travel”的全球搜索热度明显上升。越来越多海外用户正在主动了解中国。至于这些关注最终能否变成真实行程，还要结合入境和航班数据来看。
+    </p>
+  </div>
+        <figure class="chart-card wide reveal">
+          <div class="figure-kicker">Google trends关注度</div>
+          <div id="searchTrendChart" class="chart tall"></div>
+          <figcaption>
+            <strong style="display: block; color: #a74737; margin-bottom: 4px; font-size: 14px;">图4 “China Travel”全球搜索热度变化</strong>
+            <b>资料来源:</b> Google Trends。<br/>
+            <b>注:</b> 搜索热度为相对指数，数值越高代表该关键词在对应时间内的相对关注度越高，不等于实际搜索人数。<br/>
+            <b>使用方法:</b> 以“China Travel”为关键词提取 Google Trends 周度热度指数，观察中国入境政策变化后海外用户对中国旅行信息的关注趋势。
+          </figcaption>
+        </figure>
+        <div class="split-visual">
+          <figure class="chart-card reveal">
+            <div class="figure-kicker">热度来源</div>
+            <div id="searchRegionChart" class="chart"></div>
+            <figcaption>
+              <strong style="display: block; color: #a74737; margin-bottom: 4px; font-size: 14px;">图5 “China Travel”地区搜索热度排行</strong>
+              <b>资料来源:</b> Google Trends 地区热度数据。<br/>
+              <b>注:</b> 地区热度反映搜索占比的相对强度，并不代表实际赴华人数或游客规模。<br/>
+              <b>使用方法:</b> 选取搜索热度较高的国家或地区进行排序，用于观察哪些地区对“中国旅行”表现出更高线上关注度。<br/>
+              <b>主要发现:</b> 搜索热度排名前列的几乎全是被免签政策覆盖的国家（如新马泰、澳洲、欧洲多国），政策直接激活了当地民众的好奇心。
+            </figcaption>
+          </figure>
+          <figure class="chart-card reveal">
+            <div class="figure-kicker">政策覆盖</div>
+            <div id="policySearchChart" class="chart"></div>
+            <figcaption>
+              <strong style="display: block; color: #a74737; margin-bottom: 4px; font-size: 14px;">图6 免签政策覆盖地区与搜索热度对比</strong>
+              <b>资料来源:</b> 政策表与 Google Trends。<br/>
+              <b>注:</b> 政策覆盖地区平均热度更高，不代表免签单独导致搜索增长。<br/>
+              <b>使用方法:</b> 按是否处于免签或过境免签覆盖范围对地区热度求平均。<br/>
+              <b>主要发现:</b> 被免签政策覆盖的地区，其对“China Travel”的平均搜索热度是非覆盖地区的近2倍。
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="chapter scrolly" id="gateways">
+        <div class="story-text reveal">
+          <p class="stamp">GATEWAY 04</p>
+          <h2>航空客流汇聚在哪里</h2>
+          <p>
+            机场旅客吞吐量反映一个地区航空运输网络的总体客流基础。将各运输机场按省级行政区汇总，可以观察国内航空客流在不同地区的分布与变化。
+          </p>
+          <p>
+            需要注意的是，这一指标同时包含国内、国际及地区航班旅客，也包括入港、出港和过站人次，不能直接等同于外国游客人数或外国游客的入境首站。
+          </p>
+        </div>
+        <figure class="airport-throughput-module reveal" aria-labelledby="airportModuleTitle">
+          <header class="airport-module-head">
+            <div>
+              <h3 id="airportModuleTitle">2023—2025年各地区机场旅客吞吐量</h3>
+              <p>按省级行政区汇总，单位：万人次</p>
+            </div>
+            <div class="airport-year-tabs" role="group" aria-label="选择统计年份">
+              <button type="button" data-airport-year="2023" aria-pressed="false">2023</button>
+              <button type="button" data-airport-year="2024" class="is-active" aria-pressed="true">2024</button>
+              <button type="button" data-airport-year="2025" aria-pressed="false">2025</button>
+            </div>
+          </header>
+
+          <div class="airport-viz-grid">
+            <section class="airport-map-panel" aria-labelledby="airportMapTitle">
+              <h4 id="airportMapTitle">2024年各地区机场旅客吞吐量</h4>
+              <div id="airportProvinceMap" class="airport-map-chart" role="img" aria-label="2024年中国各省级地区机场旅客吞吐量分布地图"></div>
+            </section>
+
+            <section class="airport-ranking-panel" aria-labelledby="airportRankingTitle">
+              <div class="airport-ranking-head">
+                <div>
+                  <h4 id="airportRankingTitle">旅客吞吐量前十地区</h4>
+                  <p>单位：万人次</p>
+                </div>
+                <div class="airport-view-tabs" role="group" aria-label="选择2025年排名视图" hidden>
+                  <button type="button" data-airport-view="province" class="is-active" aria-pressed="true">省级总量</button>
+                  <span aria-hidden="true">｜</span>
+                  <button type="button" data-airport-view="international" aria-pressed="false">国际枢纽</button>
+                </div>
+              </div>
+              <div id="airportRankingChart" class="airport-ranking-chart" role="img" aria-label="2024年机场旅客吞吐量前十省级地区横向条形图"></div>
+              <p class="airport-international-note" hidden>国际航线旅客吞吐量包括入境与出境旅客，也包括中国旅客和外国旅客，不能直接等同于外国游客入境人数。</p>
+            </section>
+          </div>
+
+          <p class="airport-module-error" id="airportModuleError" role="status" hidden></p>
+          <figcaption class="airport-module-note">
+            <strong>图7｜2023—2025年各地区机场旅客吞吐量变化</strong>
+            <b>资料来源：</b>中国民用航空局《2024年全国民用运输机场生产统计公报》《2025年全国民用运输机场生产统计公报》及2025年全国民用运输机场吞吐量排名表。<br />
+            <b>统计口径：</b>旅客吞吐量为机场全年进港、出港及过站旅客人次之和，包括国内、国际及地区航班，不等同于外国游客入境人数。2023年和2024年数据来自民航局省级汇总表，2025年数据由作者根据机场所在省级行政区汇总。港澳台地区数据未纳入本图统计。<br />
+            <b>主要发现：</b>全国机场客流持续集中在长三角、粤港澳大湾区、京津冀和成渝等枢纽地区。该数据主要反映各地区的航空客流基础，不能单独用于判断外国游客的入境首站。
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="chapter scrolly" id="video">
+        <div class="story-text reveal">
+          <p class="stamp">VIDEO 05</p>
+          <h2>微观下的中国</h2>
+          <p>
+            如果翻看 YouTube 上关于 China Travel 的视频，你会发现，外国博主镜头里的中国往往非常具体：准时的高铁、交错的地铁线、热闹的夜市、不用带钱包的扫码支付、充满科技感的城市天际线，以及深夜一个人走在街上的安全感。
+            这些，正是旅客们抵达后最先注意到的真实细节与人文关怀。
+          </p>
+        </div>
+        <div class="split-visual">
+          <figure class="chart-card reveal">
+            <div class="figure-kicker">视频主题</div>
+            <div id="videoThemeChart" class="chart"></div>
+            <figcaption>
+              <strong style="display: block; color: #a74737; margin-bottom: 4px; font-size: 14px;">图8 YouTube “China Travel”视频标题主题样本</strong>
+              <b>资料来源:</b> YouTube “China Travel”相关视频样本。<br/>
+              <b>注:</b> 分类结果体现样本中的内容倾向，不能直接推断整体舆论态度。<br/>
+              <b>使用方法:</b> 对视频标题和简介进行文本整理，提取高频表达与典型叙事，将其归纳为“未来城市”“安全中国”“美食体验”“反差发现”“出行攻略”等类型。<br/>
+              <b>主要发现:</b> 外国博主的视角非常微观，相比宏大的叙事，他们更喜欢记录城市天际线、旅行攻略和意想不到的反差感。
+            </figcaption>
+          </figure>
+          <figure class="chart-card reveal">
+            <div class="figure-kicker">海外社交媒体与“China Travel”相关的高频词语</div>
+            <div id="keywordChart" class="chart"></div>
+            <figcaption>
+              <strong style="display: block; color: #a74737; margin-bottom: 4px; font-size: 14px;">图9 海外社交媒体中的中国旅行叙事类型</strong>
+              <b>资料来源:</b> YouTube “China Travel”相关视频标题与简介样本。<br/>
+              <b>注:</b> 标题样本反映创作者对中国旅行的呈现方式，不代表平台全部视频内容，也不等同于所有外国游客态度。<br/>
+              <b>使用方法:</b> 选取与“China Travel”相关的视频标题和简介，根据关键词与叙事重点归纳为交通体验、城市形象、饮食文化、安全感、反差叙事、政策便利等主题。<br/>
+              <b>主要发现:</b> "Expected"、"Food"、"Futuristic" 成为高频词，这展现了外国游客对中国现代化与烟火气并存的惊喜。
+            </figcaption>
+          </figure>
+        </div>
+        <div class="video-cards reveal" id="videoCards"></div>
+      </section>
+
+      <section class="chapter scrolly" id="experience">
+        <div class="story-text reveal">
+          <p class="stamp">SERVICE 06</p>
+          <h2>人流之下的考验</h2>
+          <p>
+            免签政策解决了“能不能来”的问题。但当外国游客真正站在中国的街头，那些微小的人文关怀才决定了他们的旅行体验。
+          </p>
+          <p>
+            手机支付顺不顺畅？酒店对外宾的服务怎么样？导航的语言障碍能不能克服？遇到突发状况时，能不能方便地找到人帮忙？
+            这些看似琐碎的瞬间，最终拼凑出了他们对中国的完整印象。
+          </p>
+        </div>
+        <div class="journey reveal" id="journeyFlow"></div>
+      </section>
+
+      <section class="ending reveal">
+        <div class="ending-copy">
+          <p class="stamp">CONCLUSION</p>
+          <h2>看见中国</h2>
+          <p>
+            所以外国人真的更爱来中国了吗？通过数据的验证，我们可以得出这么一个结论：China Travel实际上提供了一条“看见中国”的途径。这也意味着来中国的门槛确实变低了，游客量确实变多了，国外社交媒体的搜索框和视频标题里也确实出现了更多关于中国旅行的内容。
+          </p>
+          <p>
+            过去，对国外旅客来说，中国是一个遥远和神秘的东方大国。现在，外国游客和博主逐渐以自己的镜头记录旅行中的细节，以此来解构那一个神秘的“东方大国”。这是旅游的复苏，更是新视角下对中国的重新发现。
+          </p>
+        </div>
+
+        <div style="text-align: center; color: #071c21; font-size: 16px; margin-top: 40px; margin-bottom: 20px;">
+          作者：万曦然、张展绮、曾勇博
+        </div>
+
+        <div class="production-note" style="margin-top: 0; padding-top: 0; border-top: none;">
+          <div class="source-box" id="sources"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="data/airport-throughput-by-province.js"></script>
+    <script src="assets/china-provinces.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
